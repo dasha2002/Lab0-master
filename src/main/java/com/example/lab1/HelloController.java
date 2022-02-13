@@ -21,7 +21,7 @@ public class HelloController {
 
     @FXML
     private void initialize() {
-        Lab2.setText("New");
+        Lab2.setText("New text for label without any button");
     }
 
 
