@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -9,15 +11,61 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab1.HelloController">
+<VBox prefHeight="393.0" prefWidth="513.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab1.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <Button fx:id="ButHi" mnemonicParsing="false" onAction="#onButHiButtonClick" text="Hihi" />
-   
-       <Label fx:id="welcomeText" />
-      <Label fx:id="Lab2" />
-       <Button onAction="#onHelloButtonClick" text="Hello!" />
+      <HBox prefHeight="94.0" prefWidth="473.0">
+         <children>
+            <ImageView fitHeight="86.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../nba.png" />
+               </image>
+            </ImageView>
+            <FlowPane columnHalignment="CENTER" prefHeight="89.0" prefWidth="43.0" />
+            <VBox alignment="CENTER" prefHeight="95.0" prefWidth="339.0">
+               <children>
+               
+                   <Label fx:id="welcomeText" prefHeight="27.0" prefWidth="217.0" style="-fx-wrap-text: 12;" text="NBA Management System" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Lab2" prefHeight="53.0" prefWidth="390.0" text="Wecome to use this NBA Management system, you can redirect different pages according to your role by cliking the buttons bellow" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="53.0" prefWidth="473.0">
+         <children>
+             <Button onAction="#onHelloButtonClick" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #1E90FF; -fx-text-fill: white;" text="Visitor" />
+            <FlowPane columnHalignment="CENTER" prefHeight="74.0" prefWidth="62.0" />
+            <Button fx:id="ButHi" mnemonicParsing="false" onAction="#onButHiButtonClick" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #1E90FF; -fx-text-fill: White;" text="Admin" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="121.0" prefWidth="473.0">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" text="&lt;" />
+            <FlowPane columnHalignment="CENTER" prefHeight="74.0" prefWidth="62.0" />
+            <ImageView fitHeight="92.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../nba.png" />
+               </image></ImageView>
+            <ImageView fitHeight="92.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../nba.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="92.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../nba.png" />
+               </image>
+            </ImageView>
+            <FlowPane columnHalignment="CENTER" prefHeight="74.0" prefWidth="62.0" />
+            <Button alignment="CENTER" mnemonicParsing="false" text="&gt;" />
+         </children>
+      </HBox>
+      <Label alignment="CENTER" prefHeight="31.0" prefWidth="473.0" style="-fx-background-color: #1E90FF; -fx-text-fill: white;" text="The current season 2021-2022 and the NBA already has a history of many years" />
    </children>
 </VBox>
